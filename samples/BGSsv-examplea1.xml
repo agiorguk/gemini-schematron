@@ -854,4 +854,15 @@
             </gmd:lineage>
         </gmd:DQ_DataQuality>
     </gmd:dataQualityInfo>
+    <metadataConstraints>
+        <gmd:MD_LegalConstraints>
+            <gmd:useConstraints>
+                <gmd:MD_RestrictionCode codeList="gmxCodelists.xml#MD_RestrictionCode"
+                    codeListValue="otherRestrictions"/>
+            </gmd:useConstraints>
+            <gmd:otherConstraints>
+                <gmx:Anchor xlink:href="https://creativecommons.org/licenses/by-nd/4.0/">Metadata is distributed with a CC BY-ND 4.0 (Attribution-NoDerivs 4.0 International) licence</gmx:Anchor>
+            </gmd:otherConstraints>
+        </gmd:MD_LegalConstraints>
+    </metadataConstraints>
 </gmd:MD_Metadata>
