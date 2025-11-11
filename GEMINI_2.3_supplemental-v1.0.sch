@@ -94,11 +94,11 @@
     <sch:pattern fpi="Gemini2-mi18-resolution-and-scale-WARN">
         <sch:title>Spatial Resolution resolution and scale</sch:title>
         <sch:p>We need to test as per INSPIRE TG Requirement 1.5 that for a dataset or dataset series that we have EITHER equivalent scale or a resolution distance WHERE they are described, but NEVER both.</sch:p>
-        <sch:let name="srRD" value="count(//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/*[1]/gmd:spatialResolution/*[1]/gmd:distance/gco:Distance)"/>
-        <sch:let name="srES" value="count(//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/*[1]/gmd:spatialResolution/*[1]/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer)"/>
+        <sch:let name="srRD" value="//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/*[1]/gmd:spatialResolution/*[1]/gmd:distance/gco:Distance"/>
+        <sch:let name="srES" value="//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/*[1]/gmd:spatialResolution/*[1]/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer"/>
         <sch:rule context="//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/gmd:MD_DataIdentification">
             <sch:report
-                test="($hierarchyLevelCLValue = 'dataset' or $hierarchyLevelCLValue = 'series') and ($srES &gt; 0 and $srRD &gt; 0)"> 
+                test="($hierarchyLevelCLValue = 'dataset' or $hierarchyLevelCLValue = 'series') and (count($srES) &gt; 0 and count($srRD) &gt; 0)"> 
                 SP-6: Spatial resolution for data set or data set series shall be given using either equivalent scale or a resolution distance, provided that these have been specified for the described data sets. If both ways have been specified, only one of the ways shall be used.
                 We have equivalent scale <sch:value-of select="$srES"/> and resolution distance <sch:value-of select="$srRD"/>
             </sch:report>
