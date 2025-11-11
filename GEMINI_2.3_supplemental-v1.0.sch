@@ -8,7 +8,7 @@
      British Geological Survey (BGS), with funding from AGI.
      
      Document History:
-     
+     2018-07-03 - First version of supplemental schematron
      2025-11-07 ~ Added this intro text, added variable, added test for spatial resolution
 -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt" schemaVersion="1.2">
@@ -92,7 +92,7 @@
     </sch:pattern>
     <!-- Originally tested as MI-18a (Spatial Resolution) as part of compliance schematron -->
     <sch:pattern fpi="Gemini2-mi18-resolution-and-scale-WARN">
-        <sch:title>Spatial Resolution resolution-and-scale</sch:title>
+        <sch:title>Spatial Resolution resolution and scale</sch:title>
         <sch:p>We need to test as per INSPIRE TG Requirement 1.5 that for a dataset or dataset series that we have EITHER equivalent scale or a resolution distance WHERE they are described, but NEVER both.</sch:p>
         <sch:let name="srRD" value="count(//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/*[1]/gmd:spatialResolution/*[1]/gmd:distance/gco:Distance)"/>
         <sch:let name="srES" value="count(//gmd:MD_Metadata[1]/gmd:identificationInfo[1]/*[1]/gmd:spatialResolution/*[1]/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer)"/>

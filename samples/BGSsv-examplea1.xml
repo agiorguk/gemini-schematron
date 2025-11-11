@@ -88,7 +88,7 @@
                     <gmd:authority>
                         <gmd:CI_Citation>
                             <gmd:title>
-                                <gco:CharacterString>www.epsg.org</gco:CharacterString>
+                                <gco:CharacterString>epsg.org</gco:CharacterString>
                             </gmd:title>
                             <gmd:date>
                                 <gmd:CI_Date>
@@ -119,7 +119,7 @@
                     <gmd:authority>
                         <gmd:CI_Citation>
                             <gmd:title>
-                                <gco:CharacterString>www.epsg.org</gco:CharacterString>
+                                <gco:CharacterString>epsg.org</gco:CharacterString>
                             </gmd:title>
                             <gmd:date>
                                 <gmd:CI_Date>
@@ -150,7 +150,7 @@
                     <gmd:authority>
                         <gmd:CI_Citation>
                             <gmd:title>
-                                <gco:CharacterString>www.epsg.org</gco:CharacterString>
+                                <gco:CharacterString>epsg.org</gco:CharacterString>
                             </gmd:title>
                             <gmd:date>
                                 <gmd:CI_Date>
@@ -181,7 +181,7 @@
                     <gmd:authority>
                         <gmd:CI_Citation>
                             <gmd:title>
-                                <gco:CharacterString>www.epsg.org</gco:CharacterString>
+                                <gco:CharacterString>epsg.org</gco:CharacterString>
                             </gmd:title>
                             <gmd:date>
                                 <gmd:CI_Date>
@@ -212,7 +212,7 @@
                     <gmd:authority>
                         <gmd:CI_Citation>
                             <gmd:title>
-                                <gco:CharacterString>www.epsg.org</gco:CharacterString>
+                                <gco:CharacterString>epsg.org</gco:CharacterString>
                             </gmd:title>
                             <gmd:date>
                                 <gmd:CI_Date>

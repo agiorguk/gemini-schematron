@@ -20,15 +20,9 @@
    <gmd:hierarchyLevelName gco:nilReason="inapplicable"/>
    <gmd:contact>
       <gmd:CI_ResponsibleParty>
-         <gmd:individualName>
-            <gco:CharacterString>Brown,Teresa Jane</gco:CharacterString>
-         </gmd:individualName>
          <gmd:organisationName>
             <gco:CharacterString>British Geological Survey</gco:CharacterString>
          </gmd:organisationName>
-         <gmd:positionName>
-            <gco:CharacterString>NERC-BGS Mineral Commodity Geologist</gco:CharacterString>
-         </gmd:positionName>
          <gmd:contactInfo>
             <gmd:CI_Contact>
                <gmd:phone>
@@ -56,7 +50,7 @@
                         <gco:CharacterString>United Kingdom</gco:CharacterString>
                      </gmd:country>
                      <gmd:electronicMailAddress>
-                        <gco:CharacterString>tbrown@bgs.ac.uk</gco:CharacterString>
+                        <gco:CharacterString>enquiries@bgs.ac.uk</gco:CharacterString>
                      </gmd:electronicMailAddress>
                   </gmd:CI_Address>
                </gmd:address>
@@ -68,7 +62,7 @@
       </gmd:CI_ResponsibleParty>
    </gmd:contact>
    <gmd:dateStamp>
-      <gco:Date>2017-06-21</gco:Date>
+      <gco:Date>2025-11-11</gco:Date>
    </gmd:dateStamp>
    <gmd:metadataStandardName>
       <gco:CharacterString>NERC profile of ISO19115:2003</gco:CharacterString>
@@ -178,7 +172,7 @@
             </gmd:CI_Citation>
          </gmd:citation>
          <gmd:abstract>
-            <gco:CharacterString>The British Geological Survey has one of the largest databases in the world on the production and trade of minerals. 
+            <gco:CharacterString>EXAMPLE based on actual record.  The British Geological Survey has one of the largest databases in the world on the production and trade of minerals. 
              The dataset contains annual production statistics by mass for more than 70 mineral commodities covering the majority of economically important 
              and internationally-traded minerals, metals and mineral-based materials. For each commodity the annual production statistics are recorded for 
              individual countries, grouped by continent. Import and export statistics are also available for years up to 2002. Maintenance of the database 
@@ -381,7 +375,9 @@
          <!--C 7.6 Browse graphic information [EL and OI] for ds/dss not sv -->
          <gmd:graphicOverview>
             <gmd:MD_BrowseGraphic>
-               <gmd:fileName/>
+               <gmd:fileName>
+                  <gco:CharacterString>https://resources.bgs.ac.uk/images/geonetworkThumbs/9df8df51-6332-37a8-e044-0003ba9b0d98.png</gco:CharacterString>
+               </gmd:fileName>
             </gmd:MD_BrowseGraphic>
          </gmd:graphicOverview>
          <gmd:descriptiveKeywords>
@@ -454,6 +450,19 @@
                      </gmd:date>
                   </gmd:CI_Citation>
                </gmd:thesaurusName>
+            </gmd:MD_Keywords>
+         </gmd:descriptiveKeywords>
+         <gmd:descriptiveKeywords>
+            <gmd:MD_Keywords>
+               <gmd:keyword>
+                  <gmx:Anchor xlink:href="http://www.data.gov.uk" xlink:title="UK Location (INSPIRE)">UK Location (INSPIRE)</gmx:Anchor>
+               </gmd:keyword>
+               <gmd:keyword>
+                  <gmx:Anchor xlink:href="https://met4tech.org/" xlink:title="MET4TECH">MET4TECH</gmx:Anchor>
+               </gmd:keyword>
+               <gmd:type>
+                  <gmd:MD_KeywordTypeCode codeList="https://schemas.isotc211.org/schemas/19139/-/resources/codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="dataCentre">dataCentre</gmd:MD_KeywordTypeCode>
+               </gmd:type>
             </gmd:MD_Keywords>
          </gmd:descriptiveKeywords>
          <gmd:descriptiveKeywords>
@@ -606,7 +615,7 @@
          <gmd:distributionFormat>
             <gmd:MD_Format>
                <gmd:name>
-                  <gco:CharacterString>.TXT FILES - From 1985 to 1992 (data years) individual commodity tables can also be presented as .txt files, or edited to formatted text or MS-Word files.</gco:CharacterString>
+                  <gco:CharacterString>TXT FILES - From 1985 to 1992 (data years) individual commodity tables can also be presented as .txt files, or edited to formatted text or MS-Word files.</gco:CharacterString>
                </gmd:name>
                <gmd:version gco:nilReason="unknown"/>
             </gmd:MD_Format>
@@ -688,7 +697,7 @@
                <gmd:onLine>
                   <gmd:CI_OnlineResource>
                      <gmd:linkage>
-                        <gmd:URL>http://www.bgs.ac.uk/mineralsuk/statistics/worldStatistics.html</gmd:URL>
+                        <gmd:URL>https://www.bgs.ac.uk/mineralsuk/statistics/world-mineral-statistics/</gmd:URL>
                      </gmd:linkage>
                      <gmd:name>
                         <gco:CharacterString>BGS (Minerals UK) World Mineral Statistics</gco:CharacterString>
