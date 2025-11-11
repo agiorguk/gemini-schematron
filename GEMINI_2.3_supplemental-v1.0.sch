@@ -29,7 +29,7 @@
     <sch:ns uri="http://www.isotc211.org/2005/gss" prefix="gss"/>
     <sch:ns uri="http://www.isotc211.org/2005/gts" prefix="gts"/>
     <sch:ns uri="http://www.isotc211.org/2005/gsr" prefix="gsr"/>
-    <sch:p>This Schematron schema is designed to show metadata recommendations for the GEMINI2 discovery metadata standard.</sch:p>
+    <sch:p>This Schematron schema is designed to show metadata recommendations and/or warnings for the GEMINI 2 discovery metadata standard.</sch:p>
     <!-- External document(s) -->
     <sch:let name="defaultCRScodes" value="document('https://raw.githubusercontent.com/agiorguk/gemini-schematron/main/resources/d4.xml')" />
     <!-- IR titles -->
@@ -65,6 +65,8 @@
             </sch:report>
         </sch:rule>
     </sch:pattern>
+    <!-- Use of default here is potentially misleading. We need to convey that it is not a CRS from Annex D4 
+    and this may potentially be an issue. -->
     <sch:pattern fpi="Gemini2-mi17-refSysInfo-recs">
         <sch:title>Coordinate Reference System (warning)</sch:title>
         <sch:p>Checking whether coordinate reference system is a default CRS</sch:p>
@@ -91,6 +93,7 @@
         </sch:rule>
     </sch:pattern>
     <!-- Originally tested as MI-18a (Spatial Resolution) as part of compliance schematron -->
+    <!-- This test is in supplemental currently as part of migration to next major release version of GEMINI. -->
     <sch:pattern fpi="Gemini2-mi18-resolution-and-scale-WARN">
         <sch:title>Spatial Resolution resolution and scale</sch:title>
         <sch:p>We need to test as per INSPIRE TG Requirement 1.5 that for a dataset or dataset series that we have EITHER equivalent scale or a resolution distance WHERE they are described, but NEVER both.</sch:p>
