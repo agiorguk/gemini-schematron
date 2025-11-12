@@ -65,22 +65,22 @@
             </sch:report>
         </sch:rule>
     </sch:pattern>
-    <!-- Use of default here is potentially misleading. We need to convey that it is not a CRS from Annex D4 
-    and this may potentially be an issue. -->
+    <!-- Use of default here is potentially misleading. We need to convey that the CRS identifier is not a CRS identifier from Annex D4 of
+    the technical specification, and this may potentially be an issue. -->
     <sch:pattern fpi="Gemini2-mi17-refSysInfo-recs">
         <sch:title>Coordinate Reference System (warning)</sch:title>
-        <sch:p>Checking whether coordinate reference system is a default CRS</sch:p>
+        <sch:p>Checking whether coordinate reference system uses a default CRS identifier, as specified in Annex D.4 of the INSPIRE technical guidance</sch:p>
         <sch:rule
             context="//gmd:MD_Metadata[1]/gmd:referenceSystemInfo/*[1]/gmd:referenceSystemIdentifier/gmd:RS_Identifier[1]/gmd:code/gmx:Anchor[1]/@xlink:href">
             <sch:assert
                 test="$defaultCRScodes//crs/text()[normalize-space(.) = normalize-space(current()/.)]">
-                SP-4a: Coordinate Reference System: <sch:value-of select="normalize-space(current()/.)"/> is not a default CRS </sch:assert>
+                SP-4a: Coordinate Reference System: <sch:value-of select="normalize-space(current()/.)"/> is not a default CRS identifier</sch:assert>
         </sch:rule>
         <sch:rule
             context="//gmd:MD_Metadata[1]/gmd:referenceSystemInfo/*[1]/gmd:referenceSystemIdentifier/gmd:RS_Identifier[1]/gmd:code/gco:CharacterString">
             <sch:assert
                 test="$defaultCRScodes//crs/text()[normalize-space(.) = normalize-space(current()/.)]">
-                SP-4b: Coordinate Reference System: <sch:value-of select="normalize-space(current()/.)"/> is not a default CRS </sch:assert>
+                SP-4b: Coordinate Reference System: <sch:value-of select="normalize-space(current()/.)"/> is not a default CRS identifier</sch:assert>
         </sch:rule>
     </sch:pattern>
     <sch:pattern fpi="Gemini2-mi41-inspire1089x-WARN">
