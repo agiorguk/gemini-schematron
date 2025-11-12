@@ -73,7 +73,8 @@
                 ~ moved sch:lets for debug reporting to top, for compliance to RELAX NG schema for Schematron
     2018-07-03  ~ Release Candidate 9
                 ~ updated reference XML files to location on https://agi.org.uk/
-    2021-12-09  ~ updated reference XML files to location on GitHub 
+    2021-12-09  ~ updated reference XML files to location on GitHub
+    2025-11-12  ~ updated test MI-37b for strict compliance to TG Requirement 3.5
 -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt" schemaVersion="1.2">
   <sch:title>UK GEMINI Standard Draft Version 2.3</sch:title>
@@ -731,12 +732,12 @@
         > MI-37a (Spatial Data Service Type): If the resource type is service, one spatial data service type shall be provided. </sch:assert>
       <sch:assert
         test="
-          srv:serviceType/*[1] = 'discovery' or
-          srv:serviceType/*[1] = 'view' or
-          srv:serviceType/*[1] = 'download' or
-          srv:serviceType/*[1] = 'transformation' or
-          srv:serviceType/*[1] = 'invoke' or
-          srv:serviceType/*[1] = 'other'"
+        srv:serviceType/gco:LocalName = 'discovery' or
+        srv:serviceType/gco:LocalName = 'view' or
+        srv:serviceType/gco:LocalName = 'download' or
+        srv:serviceType/gco:LocalName = 'transformation' or
+        srv:serviceType/gco:LocalName = 'invoke' or
+        srv:serviceType/gco:LocalName = 'other'"
         > MI-37b (Spatial Data Service Type): Service type shall be one of 'discovery', 'view', 'download', 'transformation',
         'invoke' or 'other' following INSPIRE generic names. </sch:assert>
     </sch:rule>
