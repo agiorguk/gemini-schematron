@@ -32,14 +32,16 @@
     <sch:p>This schematron schema is designed to show metadata recommendations and/or warnings for the GEMINI 2 discovery metadata standard.</sch:p>
     <!-- External document(s) -->
     <sch:let name="defaultCRScodes" value="document('https://raw.githubusercontent.com/agiorguk/gemini-schematron/main/resources/d4.xml')" />
-        <!-- IR titles -->
+    <sch:let name="invalidCRScodes" value="document('https://raw.githubusercontent.com/agiorguk/gemini-schematron/main/resources/checkURIs.xml')" />
+    <!-- IR titles -->
     <sch:let name="inspire1089" value="'Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services'"/>
     <sch:let name="inspire1089x" value="'COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services'"/>
     <!-- Messages -->
     <sch:let name="defCRSmsg0" value="' is not an INSPIRE default CRS identifier. '" /> 
     <sch:let name="defCRSmsg1" value="'The list of default identifiers (HTTP URIs) for the commonly expected CRS can be found at https://raw.githubusercontent.com/agiorguk/gemini-schematron/main/resources/d4.xml. '" />
     <sch:let name="defCRSmsg2" value="'These identifiers defined in Annex D.4. of the INSPIRE Technical Guidance cover most of the standard ETRS89 based CRS and commonly used elevation systems. '" />
-    <sch:let name="defCRSmsg3" value="'If the resource uses one of the CRS listed you SHOULD use the listed identifier and not another URI. '" />
+    <sch:let name="defCRSmsg3" value="'If the resource uses one of the CRS listed you SHALL use the listed identifier and not another URI. '" />
+    <sch:let name="defCRSmsg4" value="'Use of a URN here FAILS TG requirement 2.2 metadata/2.0/req/isdss/crs-id'" />
     <!-- Define some generic parameters -->
     <sch:let name="hierarchyLevelCLValue"
         value="//gmd:MD_Metadata/gmd:hierarchyLevel[1]/gmd:MD_ScopeCode[1]/@codeListValue"/>
@@ -90,6 +92,15 @@
                 test="$defaultCRScodes//crs/text()[normalize-space(.) = normalize-space(current()/.)]">
                 SP-4b: Coordinate Reference System: <sch:value-of select="normalize-space(current()/.)"/> <sch:value-of select="$defCRSmsg0"/>
                 <sch:value-of select="$defCRSmsg1"/> <sch:value-of select="$defCRSmsg2"/> <sch:value-of select="$defCRSmsg3"/>
+            </sch:assert>
+        </sch:rule>
+        <!-- Stricter test for INSPIRE Requirement 2.2 (metadata/2.0/req/isdss/crs-id) -->
+        <sch:rule
+            context="//gmd:MD_Metadata[1]/gmd:referenceSystemInfo/*[1]/gmd:referenceSystemIdentifier/gmd:RS_Identifier[1]/gmd:code/gco:CharacterString">
+            <sch:assert
+                test="$invalidCRScodes//nonDefaultID/text()[normalize-space(.) = normalize-space(current()/.)]">
+                SP-4c: Coordinate Reference System: <sch:value-of select="normalize-space(current()/.)"/> <sch:value-of select="$defCRSmsg0"/>
+                <sch:value-of select="$defCRSmsg1"/> <sch:value-of select="$defCRSmsg2"/> <sch:value-of select="$defCRSmsg3"/> <sch:value-of select="$defCRSmsg4"/>
             </sch:assert>
         </sch:rule>
         <!-- Need a rule to test for use of common (other) identifiers URNs other HTTP URIs for exmple 27700, 3857, 4326, CRS84, 29900-->

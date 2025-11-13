@@ -1,8 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <invalidIdentifiers>
-    <!-- 
-    [A] URN format urn:ogc:def:crs:EPSG:27700 (note that this isn't a valid URN ... it should be urn:ogc:def:crs:EPSG::27700 or have a version number 
-    like urn:ogc:def:crs:EPSG:0:27700 
-    [B] <gco:CharacterString>27700</gco:CharacterString> also not valid 
-    -->
+    <!-- nonDefaultID are CRS identifiers that use a different URI form than mandated in Annex D.4 of the INSPIRE technical guidelines 
+    The list below is not exhaustive -->
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:4936</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:4937</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:4258</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3035</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3034</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3038</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3039</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3040</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3041</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3042</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3043</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3044</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3045</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3046</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3047</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3048</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3049</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3050</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:3051</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:5730</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:5861</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:5715</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:0:7409</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::4936</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::4937</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::4258</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3035</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3034</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3038</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3039</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3040</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3041</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3042</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3043</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3044</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3045</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3046</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3047</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3048</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3049</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3050</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::3051</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::5730</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::5861</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::5715</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG::7409</nonDefaultID>
+    <!-- Note the following set are not valid URNs but it is a common error to omit a colon when there is no version -->
+    <nonDefaultID>urn:ogc:def:crs:EPSG:4936</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:4937</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:4258</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3035</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3034</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3038</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3039</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3040</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3041</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3042</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3043</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3044</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3045</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3046</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3047</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3048</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3049</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3050</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:3051</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:5730</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:5861</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:5715</nonDefaultID>
+    <nonDefaultID>urn:ogc:def:crs:EPSG:7409</nonDefaultID>
 </invalidIdentifiers>
