@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<invalidIdentifiers>
+    <!-- 
+    [A] URN format urn:ogc:def:crs:EPSG:27700 (note that this isn't a valid URN ... it should be urn:ogc:def:crs:EPSG::27700 or have a version number 
+    like urn:ogc:def:crs:EPSG:0:27700 
+    [B] <gco:CharacterString>27700</gco:CharacterString> also not valid 
+    -->
+</invalidIdentifiers>
